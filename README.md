@@ -83,7 +83,7 @@ Specify your chain/network ID if you want an explicit one (default = random)
 # 10) When you are back at the main menu, choose the "Manage existing genesis" option.
 
 # 11) Choose the "Export genesis configurations". Then simply press enter for default. This will fail to create two of the files, but you only need networkname.json.
-![genesis_config](screenshots\genesis_configuration.png)
+![genesis_config](genesis_configuration.png)
 
 # 12) You can delete the networkname-harmony.json file.
 
@@ -115,7 +115,7 @@ Specify your chain/network ID if you want an explicit one (default = random)
 
 To retrieve enode address: Copy the entire `enode://` address (including the last `@address:port` segment) of the first node located in the `Started P2P Networking` line.
 
-![enode](screenshots\enode_address.png)
+![enode](enode_address.png)
 ---
 # 18) You should now see both nodes producing new blocks, congratulations!
 
@@ -156,12 +156,12 @@ syncmode 'full' helps preventing the error Discarded Bad Propagated Block.
 
 ### 1. In the left pane on MyCrypto, click "Change Network" at the bottom left.
 
-![network](screenshots\change_network.png)
+![network](change_network.png)
 
 ## seting network info
 ### 2. Click on "Add Custom Node", then add the custom network information that was set in the genesis.
 
-![custom_node](screenshots\add_custom_node.png)
+![custom_node](add_custom_node.png)
 
 ### 3. Ensure that you scroll down to choose `Custom` in the "Network" setting to reveal more options like `Chain ID`:
 
@@ -170,32 +170,32 @@ syncmode 'full' helps preventing the error Discarded Bad Propagated Block.
 ### 5. The URL is pointing to the default RPC port on your local machine. Everyone should use this same URL: `http://127.0.0.1:8545`
 
 
-![custom_node2](screenshots\custom_node_setup.png)
+![custom_node2](custom_node_setup.png)
 
 ### 6. Select Keystore File to open up your wallet. Click "SELECT WALLET FILE" and navigate to node1/keystore file (the one start with UTC-....” and is also where your encrypted private key is stored, then type your node1 password (you had created this password earlier when you first create accounts by Geth) 
 ### We need to select node1 keystore file because node1 already has RPC exposed port.
 
-![keystore](screenshots\select_keystore.png)
-![keystore2](screenshots\utc_wallet.png)
+![keystore](select_keystore.png)
+![keystore2](utc_wallet.png)
 
 # We're going to send a transaction to ourselves to test it out. Follow the next steps.
 
 * Copy the pre-fund address into the "To Address" field, then fill in an arbitrary amount of ETH.
 
-![pretransaction](screenshots\pretransaction.png)
+![pretransaction](pretransaction.png)
 
 * Confirm the transaction by clicking "Send Transaction", and the "Send" button in the pop-up window.
 
-![confirmed_transaction](screenshots\confirmed_transactions.png)
+![confirmed_transaction](confirmed_transactions.png)
 
 * Click the `Check TX Status` when the green message pops up, confirm the logout:
 
-![check_tx_status](screenshots\tx_broadcast_confirmed.png)
+![check_tx_status](tx_broadcast_confirmed.png)
 
 * You should see the transaction go from `Pending` to `Successful` in around the same blocktime you set in the genesis.
 
 * You can click the `Check TX Status` button to update the status.
 
-![successful](screenshots\transaction_metadata.png)
+![successful](transaction_metadata.png)
 
 # Congratulations, that was the first transaction send on this blockchain network! 
