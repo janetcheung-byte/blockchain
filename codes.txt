@@ -1,0 +1,19 @@
+./geth account new --datadir node1
+./geth account new --datadir node2
+
+echo '0x94df8b264da4aea779886f647d7C409889dE786D' >> accounts.txt
+echo '0xCe8c078f299315dD35fa4c081429c07e4ed74417' >> accounts.txt
+
+echo 'node1' > node1/password.txt  
+echo 'node2' > node2/password.txt  
+
+./geth --datadir node1/ --syncmode 'full' --networkid 888 --rpc --minerthreads 1 --unlock "94df8b264da4aea779886f647d
+7c409889de786d" --password node1/password.txt --mine --allow-insecure-unlock
+
+#enode://93b0e85b443f8f559b624d5f28707e9d5435b16b242f808f1c8fd0ce458f6ef045679893e9b232af447194bdbe01c2a4f45192f6e5d3c469cbcd3cf1135343f1@127.0.0.1:30303
+
+./geth --datadir node2/ --syncmode 'full' --networkid 888 --unlock "ce8c078f299315dd35fa4c081429c07e4ed74417" --passw
+ord node2/password.txt --mine --allow-insecure-unlock --port 30304 --bootnodes "enode://93b0e85b443f8f559b624d5f28707e9
+d5435b16b242f808f1c8fd0ce458f6ef045679893e9b232af447194bdbe01c2a4f45192f6e5d3c469cbcd3cf1135343f1@127.0.0.1:30303" --ip
+cdisable
+
