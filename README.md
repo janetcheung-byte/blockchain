@@ -97,7 +97,7 @@ Specify your chain/network ID if you want an explicit one (default = random)
 ---
 # 15) Run the first node, unlock the account, enable mining, and the RPC flag. Only one node needs RPC enabled.
 ```bash
-./geth --datadir node1/ --syncmode 'full' --networkid (any_numbers) --minerthreads 1 --unlock "node1_sealer_address" --password node1/password.txt --mine --allow-insecure-unlock 
+./geth --datadir node1/ --syncmode 'full' --networkid (any_numbers) --rpc --minerthreads 1 --unlock "node1_sealer_address" --password node1/password.txt --mine --allow-insecure-unlock 
 ```
 ### node1_sealer_address: By open up keystore file in a text editor, the address value can be found in 'UTC' text file. File path is node1/keystore/'UTC...etc'
  ### Notice that the last part of the file name in keystore/'UTC..address' is the address of your account 
@@ -109,7 +109,9 @@ Specify your chain/network ID if you want an explicit one (default = random)
 ## While node1 is mining in a terminal, open a separate a terminal to run node2. In a separate terminal, navigate to the blockchain-tools directory, run the following command line:
 
 ```bash
-./geth --datadir node2/ --syncmode 'full' --networkid (any_numbers) --rpc --unlock "node2_sealer_address" --password node2/password.txt --mine --allow-insecure-unlock --port 30304 --bootnodes "enode_address_from_node1" --ipcdisable
+
+./geth --datadir node2/ --syncmode 'full' --networki (any_numbers) --unlock "node2_sealer_address" --passw
+ord node2/password.txt --mine --allow-insecure-unlock --port 30304 --bootnodes "enode_address_from_node1" --ipcdisable
 ```
 ### node2_sealer_address: By open up keystore file in a text editor, the address value can be found in 'UTC' text file. File path is node2/keystore/'UTC...etc'
 
